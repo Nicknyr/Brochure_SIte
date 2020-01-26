@@ -122,6 +122,24 @@ const DROPDOWN = styled.div`
     position: absolute;
     top: 5em;
     z-index: 100;
+
+    ul {
+
+        li {
+            margin: 3em;
+            border-top: .5px solid rgba(255,250,250, 0.5);
+            border-bottom: .5px solid rgba(255,250,250, 0.5);
+            height: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+                color: snow;
+            }
+        }
+    }
 `;
 
 
@@ -180,7 +198,25 @@ class Jumbotron extends Component {
                         </MOBILE>
                         
                         { this.state.menuOpen ?
-                            <DROPDOWN></DROPDOWN>
+                            <DROPDOWN>
+                                <ul>
+                                    <li>
+                                        <a href="#">HOME</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">ABOUT US</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">PORTFOLIO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">SERVICES</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">CONTACT</a>
+                                    </li>
+                                </ul>
+                            </DROPDOWN>
                         : null }
                     
                         <ScrollAnimation animateIn="fadeIn" duration="5">
