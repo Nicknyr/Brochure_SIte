@@ -126,7 +126,7 @@ const DROPDOWN = styled.div`
     ul {
 
         li {
-            margin: 3em;
+            margin: 2em;
             border-top: .5px solid rgba(255,250,250, 0.5);
             border-bottom: .5px solid rgba(255,250,250, 0.5);
             height: 2em;
@@ -161,7 +161,6 @@ class Jumbotron extends Component {
     render() {
         return (
             <div>
-                
                 {/*
                 <NAVBAR>
                     <ul>

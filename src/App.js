@@ -11,12 +11,30 @@ import Team from './components/Team';
 import Footer from './components/Footer';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faLaptopCode, faEdit, faPrint, faBullhorn, faLightbulb, faDatabase, faGem, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faLaptopCode, faEdit, faPrint, faBullhorn, faLightbulb, faDatabase, faGem, faBars, faChevronCircleUp, faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare, faLinkedin, faInstagram, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
 
 
-library.add(fab, faLinkedin, faFacebookSquare, faInstagram, faTwitterSquare, faEdit, faPrint, faBullhorn, faLightbulb, faDatabase, faGem, faLaptopCode, faBars);
+library.add(fab, faLinkedin, faFacebookSquare, faInstagram, faTwitterSquare, faEdit, faPrint, faBullhorn, faLightbulb, faDatabase, faGem, faLaptopCode, faBars, faChevronCircleUp, faChevronUp, faChevronDown);
 
+/*
+
+xs = Extra small <576px
+Max container width None (auto)
+
+sm = Small ≥576px
+Max container width 540px
+
+md = Medium ≥768px
+Max container width 720px
+
+lg = Large ≥992px
+Max container width 960px
+
+xl = Extra large ≥1200px
+Max container width 1140px
+
+*/
 
 function App() {
   return (
