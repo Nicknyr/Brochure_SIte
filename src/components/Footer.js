@@ -33,6 +33,11 @@ const Footer = () => {
                 size="2x"
                 color="snow"
             />
+            <FontAwesomeIcon
+                icon={'edit'}
+                size="2x"
+                color="snow"
+            />
         </STYLES>
     );
 }
