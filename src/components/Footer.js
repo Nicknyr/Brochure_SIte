@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import Logo from '../assets/logo.svg';
-
+import Collapse from 'react-css-collapse';
 
 const STYLES = styled.div`
     @import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Roboto+Condensed&display=swap');
@@ -45,12 +45,22 @@ const CONTAINER = styled.div`
 
 const EXPANDED = styled.div`
     height: 10em;
-    width: 100%; 
+    width: 50%; 
     display: block;
 `;
 
 const HIDDEN = styled.div`
     display: none;
+`;
+
+const CONTENT = styled.div`
+    height: 5em;
+    background: red;
+    color: snow;
+`;
+
+const C = styled(Collapse)`
+  transition: height 250ms cubic-bezier(0.4, 0, 0.2, 1);
 `;
 
 class Footer extends Component {
