@@ -11,11 +11,11 @@ import Team from './components/Team';
 import Footer from './components/Footer';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faLaptopCode, faEdit, faPrint, faBullhorn, faLightbulb, faDatabase, faGem } from '@fortawesome/free-solid-svg-icons';
+import { faLaptopCode, faEdit, faPrint, faBullhorn, faLightbulb, faDatabase, faGem, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare, faLinkedin, faInstagram, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
 
 
-library.add(fab, faLinkedin, faFacebookSquare, faInstagram, faTwitterSquare, faEdit, faPrint, faBullhorn, faLightbulb, faDatabase, faGem, faLaptopCode);
+library.add(fab, faLinkedin, faFacebookSquare, faInstagram, faTwitterSquare, faEdit, faPrint, faBullhorn, faLightbulb, faDatabase, faGem, faLaptopCode, faBars);
 
 
 function App() {

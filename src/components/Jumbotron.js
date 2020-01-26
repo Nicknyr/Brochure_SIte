@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import Sunset from '../assets/sunset.jpg';
 import Logo from '../assets/logo.svg';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // #01BE9D
 
@@ -18,10 +19,11 @@ const STYLES = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 `;
 
 const INTRO = styled.div`
-    
+    margin-top: 5em;
 `
 
 const H1 = styled.h1`
@@ -94,46 +96,104 @@ const NAVBAR = styled.div`
     }
 `
 
+const MOBILE = styled.div`
+    height: 5em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: #1E2019;
+    box-shadow: 0 4px 2px -2px #FC4C46;
 
-const Jumbotron = () => {
-    return (
-        <div>
-            {/*
-            <NAVBAR>
-                <ul>
-                    <li> 
-                        <img src={Logo} height="200"/>
-                    </li>
-                    <li>
-                        <a href="#">HOME</a>
-                    </li>
-                    <li>
-                        <a href="#">ABOUT US</a>
-                    </li>
-                    <li>
-                        <a href="#">PORTFOLIO</a>
-                    </li>
-                    <li>
-                        <a href="#">SERVICES</a>
-                    </li>
-                    <li>
-                        <a href="#">CONTACT</a>
-                    </li>
-                </ul>
-            </NAVBAR>
-            */}
-                <STYLES>
-                    <ScrollAnimation animateIn="fadeIn" duration="5">
-                        <INTRO>
-                            <H1>We believe in the power of effective branding and marketing</H1>
-                            <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</P>
-                            <BUTTON>GET MY FREE QUOTE</BUTTON>
-                        </INTRO>
-                    </ScrollAnimation>
-                </STYLES>
-        </div>
-       
-    );
+
+    .fa-bars {
+        margin-right: .7em;
+    }
+`;
+
+const DROPDOWN = styled.div`
+    height: 30em;
+    width: 100%;
+    background: #1E2019;
+    display: block;
+    position: absolute;
+    top: 5em;
+    z-index: 100;
+`;
+
+
+class Jumbotron extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            menuOpen: false
+        };
+    }
+
+    onMenuClick = () => {
+        this.setState(prevState => ({
+            menuOpen: !this.state.menuOpen
+        }));    
+    }
+
+    render() {
+        return (
+            <div>
+                
+                {/*
+                <NAVBAR>
+                    <ul>
+                        <li> 
+                            <img src={Logo} height="200"/>
+                        </li>
+                        <li>
+                            <a href="#">HOME</a>
+                        </li>
+                        <li>
+                            <a href="#">ABOUT US</a>
+                        </li>
+                        <li>
+                            <a href="#">PORTFOLIO</a>
+                        </li>
+                        <li>
+                            <a href="#">SERVICES</a>
+                        </li>
+                        <li>
+                            <a href="#">CONTACT</a>
+                        </li>
+                    </ul>
+                </NAVBAR>
+                */}
+                    <STYLES>
+                        <MOBILE>
+                            <img src={Logo} height="100"/>
+                            <FontAwesomeIcon
+                                onClick={this.onMenuClick}
+                                icon={'bars'}
+                                size="2x"
+                                color="snow"
+                            />
+                        </MOBILE>
+                        
+                        { this.state.menuOpen ?
+                            <DROPDOWN></DROPDOWN>
+                        : null }
+                    
+                        <ScrollAnimation animateIn="fadeIn" duration="5">
+                            <INTRO>
+                                <H1>We believe in the power of effective branding and marketing</H1>
+                                <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</P>
+                                <BUTTON>GET MY FREE QUOTE</BUTTON>
+                            </INTRO>
+                        </ScrollAnimation>
+                    </STYLES>
+            </div>
+           
+        );
+    }
 }
-
 export default Jumbotron;
