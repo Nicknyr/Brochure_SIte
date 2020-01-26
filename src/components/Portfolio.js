@@ -8,7 +8,7 @@ import Team from '../assets/team.jpg';
 import Whiteboard from '../assets/whiteboard.jpg';
 import Writing from '../assets/writing.jpg';
 import Lightbulb from '../assets/lightbulb.jpg';
-
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const STYLES = styled.div`
     @import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Roboto+Condensed&display=swap');
@@ -54,30 +54,46 @@ class Portfolio extends Component {
                 <h2>Portfolio</h2>
                 <LINE></LINE>
                 <ul>
-                    <li>
-                        <img src={Boxes} height="200"/>
-                    </li>
-                    <li>
-                        <img src={Javascript} height="200"/>
-                    </li>
-                    <li>
-                        <img src={Money} height="200"/>
-                    </li>
-                    <li>
-                        <img src={Skyscrapers} height="200"/>
-                    </li>
-                    <li>
-                        <img src={Team} height="200"/>
-                    </li>
-                    <li>
-                        <img src={Whiteboard} height="200"/>
-                    </li>
-                    <li>
-                        <img src={Writing} height="200"/>
-                    </li>
-                    <li>
-                        <img src={Lightbulb} height="200"/>
-                    </li>  
+                    <ScrollAnimation animateIn="slideInLeft" duration="1">
+                        <li>
+                            <img src={Boxes} height="200"/>
+                        </li>
+                    </ScrollAnimation>
+                    <ScrollAnimation animateIn="slideInRight" duration="1">
+                        <li>
+                            <img src={Javascript} height="200"/>
+                        </li>
+                    </ScrollAnimation>
+                    <ScrollAnimation animateIn="slideInLeft" duration="1">
+                        <li>
+                            <img src={Money} height="200"/>
+                        </li>
+                    </ScrollAnimation>
+                    <ScrollAnimation animateIn="slideInRight" duration="1">
+                        <li>
+                            <img src={Skyscrapers} height="200"/>
+                        </li>
+                    </ScrollAnimation>
+                    <ScrollAnimation animateIn="slideInLeft" duration="1">
+                        <li>
+                            <img src={Team} height="200"/>
+                        </li>
+                    </ScrollAnimation>
+                    <ScrollAnimation animateIn="slideInRight" duration="1">
+                        <li>
+                            <img src={Whiteboard} height="200"/>
+                        </li>
+                    </ScrollAnimation>
+                    <ScrollAnimation animateIn="slideInLeft" duration="1">
+                        <li>
+                            <img src={Writing} height="200"/>
+                        </li>
+                    </ScrollAnimation>
+                    <ScrollAnimation animateIn="slideInRight" duration="1">
+                        <li>
+                            <img src={Lightbulb} height="200"/>
+                        </li>  
+                    </ScrollAnimation>
                 </ul>
             </STYLES>
         );

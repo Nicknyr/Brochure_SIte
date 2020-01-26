@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import Sunset from '../assets/sunset.jpg';
 import Logo from '../assets/logo.svg';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 // #01BE9D
 
@@ -121,14 +122,15 @@ const Jumbotron = () => {
                 </ul>
             </NAVBAR>
             */}
-            <STYLES>
-                <INTRO>
-                    <H1>We believe in the power of effective branding and marketing</H1>
-                    <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</P>
-                    <BUTTON>GET MY FREE QUOTE</BUTTON>
-                </INTRO>
-            </STYLES>
-            
+                <STYLES>
+                    <ScrollAnimation animateIn="fadeIn" duration="5">
+                        <INTRO>
+                            <H1>We believe in the power of effective branding and marketing</H1>
+                            <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</P>
+                            <BUTTON>GET MY FREE QUOTE</BUTTON>
+                        </INTRO>
+                    </ScrollAnimation>
+                </STYLES>
         </div>
        
     );

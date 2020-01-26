@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const STYLES = styled.div`
     @import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Roboto+Condensed&display=swap');
@@ -37,9 +38,11 @@ const P = styled.p`
 const About = () => {
     return (
         <STYLES>
-            <H2>About Us</H2>
-            <LINE></LINE>
-            <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras sed felis eget velit aliquet sagittis id consectetur purus. Nulla facilisi morbi tempus iaculis. Nisi quis eleifend quam adipiscing vitae proin. Tortor at risus viverra adipiscing at in. Volutpat blandit aliquam etiam erat velit scelerisque in dictum. Sed ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Hendrerit gravida rutrum quisque non tellus orci ac auctor augue. Dolor purus non enim praesent elementum. Lorem donec massa sapien faucibus et molestie ac feugiat sed. Sed risus ultricies tristique nulla.</P>
+            <ScrollAnimation animateIn="fadeIn" duration="2">
+                <H2>About Us</H2>
+                <LINE></LINE>
+                <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras sed felis eget velit aliquet sagittis id consectetur purus. Nulla facilisi morbi tempus iaculis. Nisi quis eleifend quam adipiscing vitae proin. Tortor at risus viverra adipiscing at in. Volutpat blandit aliquam etiam erat velit scelerisque in dictum. Sed ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Hendrerit gravida rutrum quisque non tellus orci ac auctor augue. Dolor purus non enim praesent elementum. Lorem donec massa sapien faucibus et molestie ac feugiat sed. Sed risus ultricies tristique nulla.</P>
+            </ScrollAnimation>
         </STYLES>
     );
 }

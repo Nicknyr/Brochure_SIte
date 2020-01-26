@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import PalmTrees from '../assets/palmtrees-dark.jpg';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const STYLES = styled.div`
     @import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Roboto+Condensed&display=swap');
@@ -47,8 +48,10 @@ const CallToAction = () => {
     return (
         <STYLES>
             <CONTAINER>
-                <H2>Introducing the flexible and more efficient way to promote your business</H2>
-                <BUTTON>CONTACT US</BUTTON>
+                <ScrollAnimation animateIn="fadeIn" duration="2">
+                    <H2>Introducing the flexible and more efficient way to promote your business</H2>
+                    <BUTTON>CONTACT US</BUTTON>
+                </ScrollAnimation>
             </CONTAINER>
         </STYLES>
     );

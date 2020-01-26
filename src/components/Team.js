@@ -4,6 +4,7 @@ import Guy1 from '../assets/guy1.jpg';
 import Guy2 from '../assets/guy2.jpg';
 import Guy3 from '../assets/guy3.jpg';
 import Woman from '../assets/woman.jpg';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const STYLES = styled.div`
     @import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Roboto+Condensed&display=swap');
@@ -60,36 +61,44 @@ const Team = () => {
             <H2>Our Team</H2>
             <LINE></LINE>
             <ul>
-                <li>
-                    <img src={Guy1} height="200" />
-                    <div className="about">
-                        <div className="about-details">
-                          <p>John Doe</p>
-                          <p>Chief Financial Officer</p>
-                        </div>  
-                    </div>
-                </li>
-                <li>
-                    <img src={Woman} height="200" />
-                    <div className="about">
-                        <p>Amanda Jones</p>
-                        <p>Head of Marketing</p>
-                    </div>
-                </li>
-                <li>
-                    <img src={Guy2} height="200" />
-                    <div className="about">
-                        <p>Mike Tarantino</p>
-                        <p>Software Engineer</p>
-                    </div>
-                </li>
-                <li>
-                    <img src={Guy3} height="200" />
-                    <div className="about">
-                        <p>Francios Perron</p>
-                        <p>UX Designer</p>
-                    </div>
-                </li>
+                <ScrollAnimation animateIn="zoomIn" duration="1">
+                    <li>
+                        <img src={Guy1} height="200" />
+                        <div className="about">
+                            <div className="about-details">
+                            <p>John Doe</p>
+                            <p>Chief Financial Officer</p>
+                            </div>  
+                        </div>
+                    </li>
+                </ScrollAnimation>
+                <ScrollAnimation animateIn="zoomIn" duration="1">
+                    <li>
+                        <img src={Woman} height="200" />
+                        <div className="about">
+                            <p>Amanda Jones</p>
+                            <p>Head of Marketing</p>
+                        </div>
+                    </li>
+                </ScrollAnimation>
+                <ScrollAnimation animateIn="zoomIn" duration="1">
+                    <li>
+                        <img src={Guy2} height="200" />
+                        <div className="about">
+                            <p>Mike Tarantino</p>
+                            <p>Software Engineer</p>
+                        </div>
+                    </li>
+                </ScrollAnimation>
+                <ScrollAnimation animateIn="zoomIn" duration="1">
+                    <li>
+                        <img src={Guy3} height="200" />
+                        <div className="about">
+                            <p>Francios Perron</p>
+                            <p>UX Designer</p>
+                        </div>
+                    </li>
+                </ScrollAnimation>
             </ul>
         </STYLES>
     );
