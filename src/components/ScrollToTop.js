@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import { Link, animateScroll as scroll } from "react-scroll";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ScrollAnimation from 'react-animate-on-scroll';
+
 
 const STYLES = styled.div`
     height: 3.5em;
@@ -11,7 +13,12 @@ const STYLES = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    position: sticky;
+    position: fixed;
+    bottom: 3em;
+    right: 3em;
+    cursor: pointer;
+    z-index: 999;
+   
 
     &:hover {
         background-color: rgba(0, 0, 0, 0.6);
@@ -33,13 +40,13 @@ class ScrollToTop extends Component {
 
     render() {
         return (
-            <STYLES onClick={this.scroll}>
-                <FontAwesomeIcon
-                        icon={'arrow-alt-circle-up'}
-                        size="2x"
-                        color="snow"
-                    />
-            </STYLES>
+                <STYLES onClick={this.scroll}>
+                    <FontAwesomeIcon
+                            icon={'arrow-alt-circle-up'}
+                            size="2x"
+                            color="snow"
+                        />
+                </STYLES>
         );
     }
 }

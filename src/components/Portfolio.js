@@ -105,6 +105,7 @@ class Portfolio extends Component {
     render() {
         return (
             <STYLES>
+                <ScrollToTop />
                 <h2>Portfolio</h2>
                 <LINE></LINE>
                 <ul name="portfolio">

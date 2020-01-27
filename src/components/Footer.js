@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import Logo from '../assets/logo.svg';
 import Collapse from 'react-css-collapse';
+import ScrollToTop from './ScrollToTop';
+
 
 const STYLES = styled.div`
     @import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Roboto+Condensed&display=swap');
@@ -81,6 +83,7 @@ class Footer extends Component {
     render() {
         return (
             <STYLES>
+                <ScrollToTop />
                 <img src={Logo} />
                 <CONTAINER>
                 <ul>

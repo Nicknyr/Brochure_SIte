@@ -6,7 +6,7 @@ import Guy3 from '../assets/guy3.jpg';
 import Woman from '../assets/woman.jpg';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import ScrollToTop from './ScrollToTop';
 
 const STYLES = styled.div`
     @import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Roboto+Condensed&display=swap');
@@ -129,6 +129,7 @@ const CONTAINER = styled.div`
 const Team = () => {
     return (
         <STYLES>
+            <ScrollToTop />
             <H2>Our Team</H2>
             <LINE></LINE>
             <ul>

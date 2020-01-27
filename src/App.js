@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Reset } from 'styled-reset';
+import styled, { css } from 'styled-components';
 import Jumbotron from './components/Jumbotron';
 import Intro from './components/Intro';
 import About from './components/About';
@@ -45,8 +46,7 @@ function App() {
         <Reset />
         <Jumbotron />
         <Intro />
-        <About />
-        <ScrollToTop />
+        <About />        
         <Portfolio />
         <CallToAction />
         <Services />
