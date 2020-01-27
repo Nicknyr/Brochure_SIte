@@ -4,6 +4,7 @@ import Sunset from '../assets/sunset-dark.jpg';
 import Logo from '../assets/logo.svg';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 // #01BE9D
 
@@ -33,6 +34,14 @@ const H1 = styled.h1`
     width: 90%;
     margin: 0 auto;
     font-family: 'Frank Ruhl Libre', serif;
+
+    @media(min-width: 768px) {
+        width: 60%;
+    }
+
+    @media(min-width: 992px) {
+        font-size: 3em;
+    }
 `;
 
 const P = styled.p`
@@ -42,6 +51,14 @@ const P = styled.p`
     margin: 2em auto;
     line-height: 1.5;
     font-weight: 400;
+
+    @media(min-width: 768px) {
+        width: 40%;
+    }
+
+    @media(min-width: 992px) {
+        font-size: 1.2em;
+    }
 `;
 
 const BUTTON = styled.button`
@@ -56,6 +73,10 @@ const BUTTON = styled.button`
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
+
+    &:hover {
+        filter: brightness(90%);
+    }
 `;
 
 const NAVBAR = styled.div`
@@ -112,11 +133,11 @@ const MOBILE = styled.div`
     top: 0%;
     left: 0%;
     background: #1E2019;
-    box-shadow: 0 4px 2px -2px #FC4C46;
+    //box-shadow: 0 4px 2px -2px #FC4C46;
     display: none;
 
 
-    .fa-bars {
+    .fa-bars, .fa-times {
         margin-right: .7em;
     }
 
@@ -157,7 +178,11 @@ const CONTAINER = styled.div`
     height: auto;
     width: 100%;
     position: absolute;
-    top: 30%;
+    top: 15%;
+
+    @media(min-width: 786px) {
+        top: 25%;
+    }
 `;
 
 
@@ -186,16 +211,50 @@ class Jumbotron extends Component {
                                     <img src={Logo} height="200"/>
                                 </li>
                                 <li>
-                                    <a href="#">HOME</a>
+                                <Link
+                                    activeClass="active"
+                                    to="section1"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration= {500}
+                                >HOME</Link>
                                 </li>
                                 <li>
-                                    <a href="#">ABOUT US</a>
+                                    <Link
+                                        activeClass="active"
+                                        to="about"
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-70}
+                                        duration= {500}
+                                    >
+                                        ABOUT US
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#">PORTFOLIO</a>
+                                    <Link
+                                        activeClass="active"
+                                        to="portfolio"
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-70}
+                                        duration= {500}
+                                    >
+                                        PORTFOLIO
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#">SERVICES</a>
+                                    <Link
+                                        activeClass="active"
+                                        to="services"
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-70}
+                                        duration= {500}
+                                    >
+                                       SERVICES
+                                    </Link>
                                 </li>
                                 <li>
                                     <a href="#">CONTACT</a>
@@ -204,31 +263,85 @@ class Jumbotron extends Component {
                         </NAVBAR>
                         <MOBILE>
                             <img src={Logo} height="100"/>
-                            <FontAwesomeIcon
+                            { this.state.menuOpen ?
+                                <FontAwesomeIcon
+                                    onClick={this.onMenuClick}
+                                    icon={'times'}
+                                    size="2x"
+                                    color="snow"
+                                />
+                            : 
+                                <FontAwesomeIcon
                                 onClick={this.onMenuClick}
                                 icon={'bars'}
                                 size="2x"
                                 color="snow"
-                            />
+                                />
+                            }
                         </MOBILE>
                         
                         { this.state.menuOpen ?
                             <DROPDOWN>
                                 <ul>
                                     <li>
-                                        <a href="#">HOME</a>
+                                        <Link
+                                            activeClass="active"
+                                            to="home"
+                                            spy={true}
+                                            smooth={true}
+                                            offset={-70}
+                                            duration= {500}
+                                        >
+                                            HOME
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#">ABOUT US</a>
+                                        <Link
+                                            activeClass="active"
+                                            to="about"
+                                            spy={true}
+                                            smooth={true}
+                                            offset={-70}
+                                            duration= {500}
+                                        >
+                                            ABOUT US
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#">PORTFOLIO</a>
+                                        <Link
+                                            activeClass="active"
+                                            to="portfolio"
+                                            spy={true}
+                                            smooth={true}
+                                            offset={-70}
+                                            duration= {500}
+                                        >
+                                            PORTFOLIO
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#">SERVICES</a>
+                                        <Link
+                                            activeClass="active"
+                                            to="services"
+                                            spy={true}
+                                            smooth={true}
+                                            offset={-70}
+                                            duration= {500}
+                                        >
+                                            SERVICES
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#">CONTACT</a>
+                                    <Link
+                                        activeClass="active"
+                                        to="contact"
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-70}
+                                        duration= {500}
+                                    >
+                                       CONTACT
+                                    </Link>
                                     </li>
                                 </ul>
                             </DROPDOWN>

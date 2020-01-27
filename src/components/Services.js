@@ -75,7 +75,7 @@ const Services = () => {
         <STYLES>
             <H2>Services</H2>
             <LINE></LINE>
-            <UL>
+            <UL name="services">
                 <ScrollAnimation animateIn="fadeIn" duration="2">
                     <li>
                         <FontAwesomeIcon

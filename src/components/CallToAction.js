@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import PalmTrees from '../assets/palmtrees-dark.jpg';
 import ScrollAnimation from 'react-animate-on-scroll';
 
+
 const STYLES = styled.div`
     @import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Roboto+Condensed&display=swap');
     height: 60vh;
@@ -14,7 +15,7 @@ const STYLES = styled.div`
     position: relative;
 
     @media(min-width: 768px) {
-        height: 40vh;
+        height: 30vh;
     }
 `;
 
@@ -25,6 +26,8 @@ const CONTAINER = styled.div`
     margin-right: -50%;
     transform: translate(-50%, -50%);
     //background: red;
+    //display: flex;
+    //align-items: center;
 
     @media(min-width: 786px) {
         width: 70%;
@@ -38,6 +41,8 @@ const H2 = styled.h2`
     color: snow;
     width: 90%;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
 `;
 
 const BUTTON = styled.button`
@@ -58,10 +63,10 @@ const CallToAction = () => {
     return (
         <STYLES>
             <CONTAINER>
-                <ScrollAnimation animateIn="fadeIn" duration="2">
+                
                     <H2>Introducing the flexible and more efficient way to promote your business</H2>
                     <BUTTON>CONTACT US</BUTTON>
-                </ScrollAnimation>
+               
             </CONTAINER>
         </STYLES>
     );

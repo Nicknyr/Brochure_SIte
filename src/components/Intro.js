@@ -77,6 +77,10 @@ const BUTTON = styled.button`
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
+
+    &:hover {
+        filter: brightness(90%);
+    }
 `;
 
 const Intro = () => {

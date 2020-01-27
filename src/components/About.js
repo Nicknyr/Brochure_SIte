@@ -74,7 +74,7 @@ const About = () => {
     return (
         <STYLES>
                 <ScrollAnimation animateIn="fadeIn" duration="2">
-                <div className="row">
+                <div className="row" name="about">
                     <div className="column-1 about-container">
                         <H2>About Us</H2>
                         <LINE></LINE>

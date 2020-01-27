@@ -106,7 +106,7 @@ class Portfolio extends Component {
             <STYLES>
                 <h2>Portfolio</h2>
                 <LINE></LINE>
-                <ul>
+                <ul name="portfolio">
                     <ScrollAnimation animateIn="zoomIn" duration="1">
                         <li>
                             <CONTAINER>
