@@ -11,6 +11,10 @@ const STYLES = styled.div`
     position: relative;
     padding-top: 3em;
     padding-bottom: 3em;
+
+    @media(min-width: 992px) {
+        height: 70vh;
+    }
 `;
 
 const H2 = styled.h2`
@@ -19,6 +23,15 @@ const H2 = styled.h2`
     font-size: 1.8em;
     margin: 0 auto;
     width: 90%;
+
+    @media(min-width: 768px) {
+        width: 60%;
+    }
+
+    @media(min-width: 992px) {
+        width: 80%;
+        font-size: 2.2em;
+    }
 `
 
 const P = styled.p`
@@ -26,6 +39,15 @@ const P = styled.p`
     width: 80%;
     margin: 0 auto;
     font-size: 1em;
+
+    @media(min-width: 768px) {
+        width: 40%;
+    }
+
+    @media(min-width: 992px) {
+        width: 60%;
+        font-size: 1.1em;
+    }
 `
 
 const CONTAINER = styled.div`
@@ -38,7 +60,7 @@ const CONTAINER = styled.div`
 
 const LINE = styled.div`
     height: 3px;
-    width: 15em;
+    width: 10em;
     background: green;
     margin: 2em auto;
 `;

@@ -16,14 +16,15 @@ const STYLES = styled.div`
     background-image: url(${Sunset});
     background-size: cover;
     //filter: brightness(70%);  
-    display: flex;
+    //display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    //position: relative;
 `;
 
 const INTRO = styled.div`
     margin-top: 5em;
+    display: block;
 `
 
 const H1 = styled.h1`
@@ -94,12 +95,15 @@ const NAVBAR = styled.div`
             }
         }
     }
+
+    @media(max-width: 786px) {
+        display: none;
+    }
 `
 
 const MOBILE = styled.div`
     height: 5em;
     width: 100%;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     position: absolute;
@@ -107,10 +111,15 @@ const MOBILE = styled.div`
     left: 0%;
     background: #1E2019;
     box-shadow: 0 4px 2px -2px #FC4C46;
+    display: none;
 
 
     .fa-bars {
         margin-right: .7em;
+    }
+
+    @media(max-width: 786px) {
+        display: flex;
     }
 `;
 
@@ -142,6 +151,13 @@ const DROPDOWN = styled.div`
     }
 `;
 
+const CONTAINER = styled.div`
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 30%;
+`;
+
 
 class Jumbotron extends Component {
     constructor(props) {
@@ -160,32 +176,30 @@ class Jumbotron extends Component {
 
     render() {
         return (
-            <div>
-                {/*
-                <NAVBAR>
-                    <ul>
-                        <li> 
-                            <img src={Logo} height="200"/>
-                        </li>
-                        <li>
-                            <a href="#">HOME</a>
-                        </li>
-                        <li>
-                            <a href="#">ABOUT US</a>
-                        </li>
-                        <li>
-                            <a href="#">PORTFOLIO</a>
-                        </li>
-                        <li>
-                            <a href="#">SERVICES</a>
-                        </li>
-                        <li>
-                            <a href="#">CONTACT</a>
-                        </li>
-                    </ul>
-                </NAVBAR>
-                */}
+            <div>        
                     <STYLES>
+                        <NAVBAR>
+                            <ul>
+                                <li> 
+                                    <img src={Logo} height="200"/>
+                                </li>
+                                <li>
+                                    <a href="#">HOME</a>
+                                </li>
+                                <li>
+                                    <a href="#">ABOUT US</a>
+                                </li>
+                                <li>
+                                    <a href="#">PORTFOLIO</a>
+                                </li>
+                                <li>
+                                    <a href="#">SERVICES</a>
+                                </li>
+                                <li>
+                                    <a href="#">CONTACT</a>
+                                </li>
+                            </ul>
+                        </NAVBAR>
                         <MOBILE>
                             <img src={Logo} height="100"/>
                             <FontAwesomeIcon
@@ -217,14 +231,15 @@ class Jumbotron extends Component {
                                 </ul>
                             </DROPDOWN>
                         : null }
-                    
-                        <ScrollAnimation animateIn="fadeIn" duration="5">
-                            <INTRO>
-                                <H1>We believe in the power of effective branding and marketing</H1>
-                                <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</P>
-                                <BUTTON>GET MY FREE QUOTE</BUTTON>
-                            </INTRO>
-                        </ScrollAnimation>
+                        <CONTAINER>
+                            <ScrollAnimation animateIn="fadeIn" duration="5">
+                                <INTRO>
+                                    <H1>We believe in the power of effective branding and marketing</H1>
+                                    <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</P>
+                                    <BUTTON>GET MY FREE QUOTE</BUTTON>
+                                </INTRO>
+                            </ScrollAnimation>
+                        </CONTAINER>
                     </STYLES>
             </div>
            

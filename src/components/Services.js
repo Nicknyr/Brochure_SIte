@@ -8,8 +8,9 @@ import "animate.css/animate.min.css";
 const STYLES = styled.div`
     height: auto;
     width: 100%;
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 8em;
+    padding-bottom: 8em;
+   
 `;
 
 const H2 = styled.h2`
@@ -43,8 +44,28 @@ const P = styled.p`
 `
 
 const UL = styled.ul`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     li {
         margin-top: 5em;
+    }
+
+    @media(min-width: 992px) {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        //background: blue;
+
+        li {
+            width: 25em;
+            //background: red;
+            height: 15em;
+        }
+        
     }
 `;
 

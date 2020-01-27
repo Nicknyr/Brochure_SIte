@@ -16,7 +16,8 @@ const STYLES = styled.div`
     //font-family: 'Frank Ruhl Libre', serif;
     height: auto;
     width: 100%;
-    padding-top: 3em;
+    padding-top: 8em;
+    padding-bottom: 8em;
 
     h2 {
         font-family: 'Frank Ruhl Libre', serif;
@@ -25,11 +26,23 @@ const STYLES = styled.div`
     }
 
     ul {
-        //display: flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         li {
             margin-bottom: 3em;
+            margin: 2em;
         }
+    }
+
+    @media(min-width: 992px) {
+        ul {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
     }
 `;
 
@@ -54,42 +67,42 @@ class Portfolio extends Component {
                 <h2>Portfolio</h2>
                 <LINE></LINE>
                 <ul>
-                    <ScrollAnimation animateIn="slideInLeft" duration="1">
+                    <ScrollAnimation animateIn="zoomIn" duration="1">
                         <li>
                             <img src={Boxes} height="200"/>
                         </li>
                     </ScrollAnimation>
-                    <ScrollAnimation animateIn="slideInRight" duration="1">
+                    <ScrollAnimation animateIn="zoomIn" duration="1">
                         <li>
                             <img src={Javascript} height="200"/>
                         </li>
                     </ScrollAnimation>
-                    <ScrollAnimation animateIn="slideInLeft" duration="1">
+                    <ScrollAnimation animateIn="zoomIn" duration="1">
                         <li>
                             <img src={Money} height="200"/>
                         </li>
                     </ScrollAnimation>
-                    <ScrollAnimation animateIn="slideInRight" duration="1">
+                    <ScrollAnimation animateIn="zoomIn" duration="1">
                         <li>
                             <img src={Skyscrapers} height="200"/>
                         </li>
                     </ScrollAnimation>
-                    <ScrollAnimation animateIn="slideInLeft" duration="1">
+                    <ScrollAnimation animateIn="zoomIn" duration="1">
                         <li>
                             <img src={Team} height="200"/>
                         </li>
                     </ScrollAnimation>
-                    <ScrollAnimation animateIn="slideInRight" duration="1">
+                    <ScrollAnimation animateIn="zoomIn" duration="1">
                         <li>
                             <img src={Whiteboard} height="200"/>
                         </li>
                     </ScrollAnimation>
-                    <ScrollAnimation animateIn="slideInLeft" duration="1">
+                    <ScrollAnimation animateIn="zoomIn" duration="1">
                         <li>
                             <img src={Writing} height="200"/>
                         </li>
                     </ScrollAnimation>
-                    <ScrollAnimation animateIn="slideInRight" duration="1">
+                    <ScrollAnimation animateIn="zoomIn" duration="1">
                         <li>
                             <img src={Lightbulb} height="200"/>
                         </li>  

@@ -5,13 +5,17 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 const STYLES = styled.div`
     @import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Roboto+Condensed&display=swap');
-    height: 100vh;
+    height: 60vh;
     width: 100%;
     background: url(${PalmTrees});
     background-size: cover;
     padding-top: 3em;
     padding-bottom: 3em;
     position: relative;
+
+    @media(min-width: 768px) {
+        height: 40vh;
+    }
 `;
 
 const CONTAINER = styled.div`
@@ -20,6 +24,12 @@ const CONTAINER = styled.div`
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+    //background: red;
+
+    @media(min-width: 786px) {
+        width: 70%;
+        font-size: 1.2em;
+    }
 `;
 
 const H2 = styled.h2`
