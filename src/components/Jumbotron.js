@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
-import Sunset from '../assets/sunset.jpg';
+import Sunset from '../assets/sunset-dark.jpg';
 import Logo from '../assets/logo.svg';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -73,6 +73,8 @@ const NAVBAR = styled.div`
         justify-content: center;
         height: 10em;
         width: 100%;
+        margin-right: 2em;
+        margin-left: 2em;
         
 
         li {

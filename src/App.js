@@ -7,6 +7,7 @@ import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Services from './components/Services';
 import CallToAction from './components/CallToAction';
+import Banner from './components/Banner';
 import Team from './components/Team';
 import Footer from './components/Footer';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -47,6 +48,7 @@ function App() {
         <Portfolio />
         <CallToAction />
         <Services />
+        <Banner />
         <Team />
         <Footer />
       </React.Fragment>

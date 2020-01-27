@@ -24,7 +24,8 @@ const STYLES = styled.div`
         width: 100%;
         
         li {
-            margin-bottom: 3em;
+            margin-top: 2.5em;
+            margin-bottom: 2.5em;
             position: relative;
         }
     }
@@ -40,7 +41,8 @@ const STYLES = styled.div`
 
             li {
                width: 100%;
-               margin-top: 2em;
+               margin-top: 3em;
+               margin-bottom: 3em;
                position: relative;
             }
         }
@@ -86,7 +88,8 @@ const CONTAINER = styled.div`
 
     .overlay {
         position: absolute;
-        background: #01BE9D;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5); /* Black see-through */        
         color: #f1f1f1; 
         width: 100%;
         transition: .5s ease;
@@ -135,11 +138,13 @@ const Team = () => {
                             <img src={Guy1} />
                             <div className="middle">
                                 <div className="text">
-                                    <FontAwesomeIcon
-                                        icon={['fab', 'linkedin']}
-                                        size="3x"
-                                        color="snow"
-                                    />
+                                    <a href="#">
+                                        <FontAwesomeIcon
+                                            icon={['fab', 'linkedin']}
+                                            size="3x"
+                                            color="#01BE9D"
+                                        />
+                                    </a>
                                 </div>
                             </div>
                             <div className="overlay">
@@ -155,11 +160,13 @@ const Team = () => {
                             <img src={Woman} />
                             <div className="middle">
                                 <div className="text">
-                                    <FontAwesomeIcon
-                                        icon={['fab', 'linkedin']}
-                                        size="3x"
-                                        color="snow"
-                                    />
+                                    <a href="#">
+                                        <FontAwesomeIcon
+                                            icon={['fab', 'linkedin']}
+                                            size="3x"
+                                            color="#01BE9D"
+                                        />
+                                    </a>
                                 </div>
                             </div>
                             <div className="overlay">
@@ -175,11 +182,13 @@ const Team = () => {
                             <img src={Guy2} />
                             <div className="middle">
                                 <div className="text">
-                                    <FontAwesomeIcon
-                                        icon={['fab', 'linkedin']}
-                                        size="3x"
-                                        color="snow"
-                                    />
+                                    <a href="#">
+                                        <FontAwesomeIcon
+                                            icon={['fab', 'linkedin']}
+                                            size="3x"
+                                            color="#01BE9D"
+                                        />
+                                    </a>
                                 </div>
                             </div>
                             <div className="overlay">
@@ -195,11 +204,13 @@ const Team = () => {
                             <img src={Guy3} />
                             <div className="middle">
                                 <div className="text">
-                                    <FontAwesomeIcon
-                                        icon={['fab', 'linkedin']}
-                                        size="3x"
-                                        color="snow"
-                                    />
+                                    <a href="#">
+                                        <FontAwesomeIcon
+                                            icon={['fab', 'linkedin']}
+                                            size="3x"
+                                            color="#01BE9D"
+                                        />
+                                    </a>
                                 </div>
                             </div>
                             <div className="overlay">
@@ -215,11 +226,13 @@ const Team = () => {
                             <img src={Guy1} />
                             <div className="middle">
                                 <div className="text">
-                                    <FontAwesomeIcon
-                                        icon={['fab', 'linkedin']}
-                                        size="3x"
-                                        color="snow"
-                                    />
+                                    <a href="#">
+                                        <FontAwesomeIcon
+                                            icon={['fab', 'linkedin']}
+                                            size="3x"
+                                            color="#01BE9D"
+                                        />
+                                    </a>
                                 </div>
                             </div>
                             <div className="overlay">
@@ -235,11 +248,13 @@ const Team = () => {
                             <img src={Guy3} />
                             <div className="middle">
                                 <div className="text">
-                                    <FontAwesomeIcon
-                                        icon={['fab', 'linkedin']}
-                                        size="3x"
-                                        color="snow"
-                                    />
+                                    <a href="#">
+                                        <FontAwesomeIcon
+                                            icon={['fab', 'linkedin']}
+                                            size="3x"
+                                            color="#01BE9D"
+                                        />
+                                    </a>
                                 </div>
                             </div>
                             <div className="overlay">

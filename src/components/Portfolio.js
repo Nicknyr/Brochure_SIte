@@ -32,8 +32,10 @@ const STYLES = styled.div`
         align-items: center;
 
         li {
-            margin-bottom: 3em;
+            margin-top: 2.5em;
+            margin-bottom: 2.5em;
             margin: 2em;
+
         }
     }
 
@@ -41,6 +43,11 @@ const STYLES = styled.div`
         ul {
             flex-direction: row;
             flex-wrap: wrap;
+
+            li {
+               margin-top: 3em;
+               margin-bottom: 3em;
+            }
         }
 
     }
@@ -51,6 +58,39 @@ const LINE = styled.div`
     width: 9em;
     background: black;
     margin: 1.5em auto;
+`;
+
+const CONTAINER = styled.div`
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+
+    img {
+        &:hover {
+            filter: brightness(40%);
+        }
+    }
+
+    &:hover .overlay {
+        opacity: 1;
+    }   
+
+    .overlay {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        color: snow;
+        font-size: 1.5em;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
 `;
 
 class Portfolio extends Component {
@@ -69,42 +109,82 @@ class Portfolio extends Component {
                 <ul>
                     <ScrollAnimation animateIn="zoomIn" duration="1">
                         <li>
-                            <img src={Boxes} height="200"/>
+                            <CONTAINER>
+                                <img src={Boxes} height="200"/>
+                                <div className="overlay">
+                                    <p>Project One</p>
+                                </div>
+                            </CONTAINER>
                         </li>
                     </ScrollAnimation>
                     <ScrollAnimation animateIn="zoomIn" duration="1">
                         <li>
-                            <img src={Javascript} height="200"/>
+                            <CONTAINER>
+                                <img src={Javascript} height="200"/>
+                                <div className="overlay">
+                                    <p>Project Two</p>
+                                </div>
+                            </CONTAINER>
                         </li>
                     </ScrollAnimation>
                     <ScrollAnimation animateIn="zoomIn" duration="1">
                         <li>
-                            <img src={Money} height="200"/>
+                            <CONTAINER>
+                                <img src={Money} height="200"/>
+                                <div className="overlay">
+                                    <p>Project Three</p>
+                                </div>
+                            </CONTAINER>
                         </li>
                     </ScrollAnimation>
                     <ScrollAnimation animateIn="zoomIn" duration="1">
                         <li>
-                            <img src={Skyscrapers} height="200"/>
+                            <CONTAINER>
+                                <img src={Skyscrapers} height="200"/>
+]                                <div className="overlay">
+                                    <p>Project Four</p>
+                                </div>
+                            </CONTAINER>
                         </li>
                     </ScrollAnimation>
                     <ScrollAnimation animateIn="zoomIn" duration="1">
                         <li>
-                            <img src={Team} height="200"/>
+                            <CONTAINER>
+                                <img src={Team} height="200"/>
+                                <div className="overlay">
+                                    <p>Project Five</p>
+                                </div>
+                            </CONTAINER>
                         </li>
                     </ScrollAnimation>
                     <ScrollAnimation animateIn="zoomIn" duration="1">
                         <li>
-                            <img src={Whiteboard} height="200"/>
+                            <CONTAINER>
+                                <img src={Whiteboard} height="200"/>
+                                <div className="overlay">
+                                    <p>Project Six</p>
+                                </div>
+                            </CONTAINER>
                         </li>
                     </ScrollAnimation>
                     <ScrollAnimation animateIn="zoomIn" duration="1">
                         <li>
-                            <img src={Writing} height="200"/>
+                            <CONTAINER>
+                                <img src={Writing} height="200"/>
+                                <div className="overlay">
+                                    <p>Project Seven</p>
+                                </div>
+                            </CONTAINER>
                         </li>
                     </ScrollAnimation>
                     <ScrollAnimation animateIn="zoomIn" duration="1">
                         <li>
-                            <img src={Lightbulb} height="200"/>
+                            <CONTAINER>
+                                <img src={Lightbulb} height="200"/>
+                                <div className="overlay">
+                                    <p>Project Eight</p>
+                                </div>
+                            </CONTAINER>
                         </li>  
                     </ScrollAnimation>
                 </ul>
