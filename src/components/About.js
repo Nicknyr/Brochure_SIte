@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
+import ScrollToTop from './ScrollToTop';
 
 const STYLES = styled.div`
     @import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Roboto+Condensed&display=swap');
@@ -84,7 +85,7 @@ const About = () => {
                     </div>
                     </div>
                 </ScrollAnimation>
-            
+            {/*<ScrollToTop />*/}
         </STYLES>
     );
 }

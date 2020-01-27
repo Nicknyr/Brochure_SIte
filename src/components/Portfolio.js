@@ -9,6 +9,7 @@ import Whiteboard from '../assets/whiteboard.jpg';
 import Writing from '../assets/writing.jpg';
 import Lightbulb from '../assets/lightbulb.jpg';
 import ScrollAnimation from 'react-animate-on-scroll';
+import ScrollToTop from './ScrollToTop';
 
 const STYLES = styled.div`
     @import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Roboto+Condensed&display=swap');

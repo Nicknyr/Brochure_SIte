@@ -111,6 +111,7 @@ const NAVBAR = styled.div`
                 text-decoration: none;
                 color: snow;
                 font-size: 1.1em;
+                cursor: pointer;
 
                 &:hover {
                     color: #01BE9D;
@@ -199,6 +200,10 @@ class Jumbotron extends Component {
         this.setState(prevState => ({
             menuOpen: !this.state.menuOpen
         }));    
+    }
+
+    scroll = () => {
+        scroll.scrollToTop();
     }
 
     render() {
@@ -356,6 +361,7 @@ class Jumbotron extends Component {
                             </ScrollAnimation>
                         </CONTAINER>
                     </STYLES>
+                    <button onClick={this.scroll}>Scroll to top</button>
             </div>
            
         );
