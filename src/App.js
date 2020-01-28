@@ -12,6 +12,7 @@ import Banner from './components/Banner';
 import Team from './components/Team';
 import ScrollToTop from './components/ScrollToTop';
 import Footer from './components/Footer';
+import NewFooter from './components/NewFooter';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faLaptopCode, faArrowAltCircleUp, faTimes, faEdit, faPrint, faBullhorn, faLightbulb, faDatabase, faGem, faBars, faChevronCircleUp, faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
@@ -53,7 +54,7 @@ function App() {
         <Services />
         <Banner />
         <Team />
-        <Footer />
+        <NewFooter />
       </React.Fragment>
     </div>
   );
