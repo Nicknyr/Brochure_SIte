@@ -24,6 +24,12 @@ const LINE = styled.div`
     width: 9em;
     background: black;
     margin: 1.5em auto;
+
+    @media(min-width: 768px) {
+        text-align: left;
+        margin: 0;
+        margin-top: .5em;
+    }
 `;
 
 const H3 = styled.h3`
@@ -49,6 +55,12 @@ const UL = styled.ul`
     justify-content: center;
     align-items: center;
 
+    @media(min-width: 768px) {
+        width: 90%;
+        margin: 0 auto;
+
+    }
+
     li {
         margin-top: 5em;
     }
@@ -69,12 +81,25 @@ const UL = styled.ul`
     }
 `;
 
+const H2CONTAINER = styled.div`
+    height: auto;
+    width: 100%;
+    
+    @media(min-width: 768px) {
+        width: 90%;
+        text-align: left;
+        margin: 0 auto;
+    }
+`;
 
 const Services = () => {
     return (
         <STYLES>
-            <H2>Services</H2>
-            <LINE></LINE>
+            <H2CONTAINER>
+                <H2>Services</H2>
+                <LINE></LINE>
+            </H2CONTAINER>
+           
             <UL name="services">
                 <ScrollAnimation animateIn="fadeIn" duration="2">
                     <li>

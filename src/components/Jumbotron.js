@@ -5,6 +5,7 @@ import Logo from '../assets/logo.svg';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, animateScroll as scroll } from "react-scroll";
+import ScrollToTop from './ScrollToTop';
 
 // #01BE9D
 

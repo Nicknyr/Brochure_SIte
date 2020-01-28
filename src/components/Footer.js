@@ -83,7 +83,6 @@ class Footer extends Component {
     render() {
         return (
             <STYLES>
-                <ScrollToTop />
                 <img src={Logo} />
                 <CONTAINER>
                 <ul>

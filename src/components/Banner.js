@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
+import ScrollToTop from './ScrollToTop';
 
 const STYLES = styled.div`
     height: 60vh;

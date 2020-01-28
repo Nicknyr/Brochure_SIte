@@ -62,7 +62,6 @@ const BUTTON = styled.button`
 const CallToAction = () => {
     return (
         <STYLES>
-            <ScrollToTop />
             <CONTAINER>
                     <H2>Introducing the flexible and more efficient way to promote your business</H2>
                     <BUTTON>CONTACT US</BUTTON>

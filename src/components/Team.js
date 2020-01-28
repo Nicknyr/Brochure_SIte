@@ -39,6 +39,12 @@ const STYLES = styled.div`
             width: 80%;
             margin: 0 auto;
 
+            @media(min-width: 768px) {
+                width: 90%;
+                margin: 0 auto;
+
+            }
+
             li {
                width: 100%;
                margin-top: 3em;
@@ -61,6 +67,12 @@ const LINE = styled.div`
     width: 9em;
     background: black;
     margin: 1.5em auto;
+
+    @media(min-width: 768px) {
+        text-align: left;
+        margin: 0;
+        margin-top: .5em;
+    }
 `;
 
 const CONTAINER = styled.div`
@@ -124,14 +136,27 @@ const CONTAINER = styled.div`
 
 `;
 
+const H2CONTAINER = styled.div`
+    height: auto;
+    width: 100%;
+    
+    @media(min-width: 768px) {
+        width: 90%;
+        text-align: left;
+        margin: 0 auto;
+    }
+`;
+
 
 
 const Team = () => {
     return (
         <STYLES>
-            <ScrollToTop />
-            <H2>Our Team</H2>
-            <LINE></LINE>
+            <H2CONTAINER>
+                <H2>Our Team</H2>
+                <LINE></LINE>
+            </H2CONTAINER>
+           
             <ul>
                 <ScrollAnimation animateIn="zoomIn" duration="1">
                     <li>

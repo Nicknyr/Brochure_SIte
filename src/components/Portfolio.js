@@ -32,6 +32,12 @@ const STYLES = styled.div`
         justify-content: center;
         align-items: center;
 
+        @media(min-width: 768px) {
+            width: 90%;
+            margin: 0 auto;
+
+        }
+    
         li {
             margin-top: 2.5em;
             margin-bottom: 2.5em;
@@ -59,6 +65,12 @@ const LINE = styled.div`
     width: 9em;
     background: black;
     margin: 1.5em auto;
+
+    @media(min-width: 768px) {
+        text-align: left;
+        margin: 0;
+        margin-top: .5em;
+    }
 `;
 
 const CONTAINER = styled.div`
@@ -94,6 +106,17 @@ const CONTAINER = styled.div`
     }
 `;
 
+const H2CONTAINER = styled.div`
+    height: auto;
+    width: 100%;
+    
+    @media(min-width: 768px) {
+        width: 90%;
+        text-align: left;
+        margin: 0 auto;
+    }
+`;
+
 class Portfolio extends Component {
     constructor(props) {
         super(props);
@@ -105,10 +128,12 @@ class Portfolio extends Component {
     render() {
         return (
             <STYLES>
-                <ScrollToTop />
-                <h2>Portfolio</h2>
-                <LINE></LINE>
-                <ul name="portfolio">
+                <H2CONTAINER>
+                    <h2>Portfolio</h2>
+                    <LINE></LINE>
+                </H2CONTAINER>
+                
+                <ul name="portfolio" >
                     <ScrollAnimation animateIn="zoomIn" duration="1">
                         <li>
                             <CONTAINER>
