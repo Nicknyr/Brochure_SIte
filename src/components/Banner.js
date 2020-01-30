@@ -6,8 +6,8 @@ import ScrollToTop from './ScrollToTop';
 const STYLES = styled.div`
     height: 60vh;
     width: 100%;
-    //background: #646361;
-    background: #0E38B1;
+    background: #646361;
+    //background: #0E38B1;
     display: flex;
     justify-content: center;
     align-items: center;

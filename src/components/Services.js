@@ -10,7 +10,7 @@ const STYLES = styled.div`
     width: 100%;
     padding-top: 8em;
     padding-bottom: 8em;
-   
+    //background: #FC4C46;
 `;
 
 const H2 = styled.h2`

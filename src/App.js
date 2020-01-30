@@ -11,6 +11,7 @@ import CallToAction from './components/CallToAction';
 import Banner from './components/Banner';
 import Team from './components/Team';
 import ScrollToTop from './components/ScrollToTop';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 import NewFooter from './components/NewFooter';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -51,10 +52,11 @@ function App() {
         <Intro />
         <About />
         <Portfolio />
+        <Team />
         <CallToAction />
         <Services />
         <Banner />
-        <Team />
+        <Contact />
         <ThirdFooter />
       </React.Fragment>
     </div>

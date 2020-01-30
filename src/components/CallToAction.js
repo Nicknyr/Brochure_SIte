@@ -8,13 +8,13 @@ const STYLES = styled.div`
     @import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Roboto+Condensed&display=swap');
     height: 60vh;
     width: 100%;
-    //background: url(${PalmTrees});
-    //background-size: cover;
+    background: url(${PalmTrees});
+    background-size: cover;
     //background: #0E38B1;
     //background: rgb(252,76,70);
     //background: linear-gradient(90deg, rgba(252,76,70,1) 0%, rgba(14,56,177,0.7133228291316527) 100%);
-    background: rgb(252,76,70);
-    background: linear-gradient(90deg, rgba(252,76,70,1) 0%, rgba(14,56,177,1) 100%);
+    //background: rgb(252,76,70);
+    //background: linear-gradient(90deg, rgba(252,76,70,1) 0%, rgba(14,56,177,1) 100%);
     padding-top: 3em;
     padding-bottom: 3em;
     position: relative;

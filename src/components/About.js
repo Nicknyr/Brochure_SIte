@@ -8,8 +8,8 @@ const STYLES = styled.div`
     font-family: 'Roboto Condensed', sans-serif;
     //font-family: 'Frank Ruhl Libre', serif;
     height: auto;
-    //background: #646361;
-    background: #0E38B1;
+    background: #646361;
+    //background: #0E38B1;
     color: snow;
     padding: 3em 1em;
     display: flex;

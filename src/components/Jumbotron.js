@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import Sunset from '../assets/sunset-dark.jpg';
 import Logo from '../assets/logo.svg';
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -15,15 +15,17 @@ const STYLES = styled.div`
     //font-family: 'Frank Ruhl Libre', serif;
     height: 100vh;
     width: 100%;
-    //background-image: url(${Sunset});
-    //background-size: cover;
+    background-image: url(${Sunset});
+    background-size: cover;
     //filter: brightness(70%);  
     //display: flex;
     justify-content: center;
     align-items: center;
     //position: relative;
-    background: #0E38B1;
+    //background: #0E38B1;
+        
 `;
+
 
 const INTRO = styled.div`
     margin-top: 5em;
