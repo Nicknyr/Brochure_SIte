@@ -15,13 +15,14 @@ const STYLES = styled.div`
     //font-family: 'Frank Ruhl Libre', serif;
     height: 100vh;
     width: 100%;
-    background-image: url(${Sunset});
-    background-size: cover;
+    //background-image: url(${Sunset});
+    //background-size: cover;
     //filter: brightness(70%);  
     //display: flex;
     justify-content: center;
     align-items: center;
     //position: relative;
+    background: #0E38B1;
 `;
 
 const INTRO = styled.div`
@@ -134,7 +135,8 @@ const MOBILE = styled.div`
     position: absolute;
     top: 0%;
     left: 0%;
-    background: #1E2019;
+    //background: #1E2019;
+    background: #0E38B1;
     //box-shadow: 0 4px 2px -2px #FC4C46;
     display: none;
 
@@ -362,7 +364,6 @@ class Jumbotron extends Component {
                             </ScrollAnimation>
                         </CONTAINER>
                     </STYLES>
-                    <button onClick={this.scroll}>Scroll to top</button>
             </div>
            
         );

@@ -1,14 +1,25 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const STYLES = styled.div`
+    @import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Roboto+Condensed&display=swap');
+    font-family: 'Roboto Condensed', sans-serif;
     height auto;
     width: 100%;
-    //background: salmon;
     background: #0E38B1;
+    //background: #1E2019;
     color: snow;
     font-size: 18px;
+    
+    svg {
+        color: snow;
+
+        &:hover {
+            color: #01BE9D;
+        }
+    }
 `;
 
 const FOOTER = styled.footer`
@@ -55,19 +66,37 @@ const CONTAINER = styled.div`
         }
 
         a {
+            font-size: 1.1em;
             color: #ECD2C9;
             text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+                color: #01BE9D;
+            }
         }
 
         h5 {
-            font-size: 1.2rem;
+            font-size: 1.4em;
+            width: 80%;
             line-height: 1.45;
-            font-weight: 400;
+            font-weight: bold;
             margin-bottom: .2em;
         }
 
         p {
             margin-bottom: .2em;
+        }
+
+        .location-h5 {
+            font-size: 1.1em;
+            //color:  #FC4C46;
+        }
+
+        .location-p {
+            font-size: 1.4em;
+            line-height: 1.4;
+            font-weight: bold;
         }
     }
 
@@ -86,6 +115,10 @@ const CONTAINER = styled.div`
                     text-decoration: none;
                     margin: .2rem;
                     color: snow;
+
+                    &:hover {
+                        color: #01BE9D;
+                    }
                 }
             }
         }
@@ -96,10 +129,6 @@ const CONTAINER = styled.div`
             flex-direction: row;
             flex-wrap: nowrap;
             justify-content: space-evenly;
-
-            li {
-                
-            }
         }
     }
 
@@ -107,6 +136,30 @@ const CONTAINER = styled.div`
         .section {
             //width: 50%;
             flex-direction: column;
+
+            a {
+            font-size: 1.1em;
+            
+            }
+
+            h5 {
+                font-size: 1.8em;
+            }
+
+            p {
+                margin-bottom: .2em;
+            }
+
+            .location-h5 {
+                font-size: 1.2em;
+                padding-top: .3em;
+                //color:  #FC4C46;
+            }
+
+            .location-p {
+                font-size: 1.4em;
+                line-height: 1.4;
+            }
         }
 
         .section-1 {
@@ -123,8 +176,6 @@ const CONTAINER = styled.div`
 
         .section-3 {
             flex-direction: row;
-            //width: 100%;
-            //flex: 1;
         }
 
         .nav-container {
@@ -259,152 +310,155 @@ const FORM = styled.form`
         text-transform: uppercase;
         font-weight: 500;
         letter-spacing: 0.04rem;
-        background-color: #ECD2C9;
-        color: #0E38B1;
-        //color: salmon;
-        opacity: 0.65;
+        background-color: #01BE9D;
+        color: #01BE9D;
+        color: snow;
+        opacity: 0.9;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 
 `;
 
  const COPYRIGHT = styled.div`
-    margin-top: 1.3rem;
+    margin-top: 5em;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     //justify-content: space-evenly;
-    font-size: 1rem;
+    font-size: .7em;
     color: #ECD2C9;
  `;
 
 const ThirdFooter = () => {
     return(
         <STYLES>
-            <FOOTER>
-                <CONTAINER>
-                    <div className="section section-1"> 
-                        <div className="inner split">
-                            <h5>Let's create something good together</h5>
-                            <a href="">Get in touch</a>
-                        </div>
-                        <div className="inner split">
-                            <h5>Join our team</h5>
-                            <a href="">View open positions</a>
-                        </div>
-                    </div>
-                    <div className="section section-1">
-                        <div className="inner">
-                            <h5>NYC Office</h5>
-                            <p>
-                                356 Lafayette St.
-                                <br/>
-                                New York, NY 10001
-                            </p>
-                        </div>
-                        <div className="inner">
-                            <h5>Miami Office</h5>
-                            <p>
-                                98 Biscayne Blvd.
-                                <br/>
-                                Miami, FL 33101
-                            </p>
-                        </div>
-                    </div>
-                    <div className="section section-2">
-                        <h5>Keep up with news from us</h5>
-                        <FORM>
-                            <div className="form-element">
-                                <div className="input-wrapper">
-                                    <input type="text" placeholder="Email Address *"></input>
-                                </div>
+            <ScrollAnimation animateIn="fadeIn" duration="2">
+                <FOOTER>
+                    <CONTAINER>
+                        <div className="section section-1"> 
+                            <div className="inner split">
+                                <h5>Interested in working together?</h5>
+                                <a href="">Get in touch</a>
                             </div>
-                            <div className="form-element">
-                                <div className="privacy">
-                                    <input type="checkbox"></input>
-                                    <label>I give my consent that my personal information can be collected and used according to the privacy policy</label>
-                                </div>
+                            <div className="inner split">
+                                <h5>Join our team</h5>
+                                <a href="">View open positions</a>
                             </div>
-                            <div className="form-element">
-                                <div className="button-container">
-                                    <button className="submit-button">Submit</button>
-                                </div>
+                        </div>
+                        <div className="section section-1">
+                            <div className="inner">
+                                <h5 className="location-h5">NYC Office</h5>
+                                <p className="location-p">
+                                    356 Lafayette St.
+                                    <br/>
+                                    New York, NY 10001
+                                </p>
                             </div>
-                        </FORM>
-                    </div>
-                    <div className="section section-3">
-                        <div className="nav-container">
-                            <ul className="nav nav-footer">
-                                <li>
-                                    <a href="">Services</a>
-                                </li>
-                                <li>
-                                    <a href="">About</a>
-                                </li>
-                                <li>
-                                    <a href="">Work</a>
-                                </li>
-                                <li>
-                                    <a href="">Blog</a>
-                                </li>
-                                <li>
-                                    <a href="">Careers</a>
-                                </li>
-                                <li>
-                                    <a href="">Contact</a>
-                                </li>
-                            </ul>
-                            <div className="social-media-icons">
-                                <ul class="social-ul">
+                            <div className="inner">
+                                <h5 className="location-h5">Miami Office</h5>
+                                <p className="location-p">
+                                    98 Biscayne Blvd.
+                                    <br/>
+                                    Miami, FL 33101
+                                </p>
+                            </div>
+                        </div>
+                        <div className="section section-2">
+                            <h5>Join our mailing list</h5>
+                            <FORM>
+                                <div className="form-element">
+                                    <div className="input-wrapper">
+                                        <input type="text" placeholder="Email Address *"></input>
+                                    </div>
+                                </div>
+                                <div className="form-element">
+                                    <div className="privacy">
+                                        <input type="checkbox"></input>
+                                        <label>I give my consent that my personal information can be collected and used according to the privacy policy</label>
+                                    </div>
+                                </div>
+                                <div className="form-element">
+                                    <div className="button-container">
+                                        <button className="submit-button">Submit</button>
+                                    </div>
+                                </div>
+                            </FORM>
+                        </div>
+                        <div className="section section-3">
+                            <div className="nav-container">
+                                <ul className="nav nav-footer">
                                     <li>
-                                        <a href="">
-                                            <FontAwesomeIcon
-                                                icon={['fab', 'linkedin']}
-                                                size="lg"
-                                                color="snow"
-                                            />
-                                        </a>
+                                        <a href="">About Us</a>
                                     </li>
                                     <li>
-                                        <a href="">
-                                            <FontAwesomeIcon
-                                                icon={['fab', 'facebook-square']}
-                                                size="lg"
-                                                color="snow"
-                                            />
-                                        </a>
+                                        <a href="">Portfolio</a>
                                     </li>
                                     <li>
-                                        <a href="">
-                                            <FontAwesomeIcon
-                                                icon={['fab', 'instagram']}
-                                                size="lg"
-                                                color="snow"
-                                            />
-                                        </a>
+                                        <a href="">Services</a>
                                     </li>
                                     <li>
-                                        <a href="">
-                                            <FontAwesomeIcon
-                                                icon={['fab', 'twitter-square']}
-                                                size="lg"
-                                                color="snow"
-                                            />
-                                        </a>
+                                        <a href="">Contact</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Careers</a>
                                     </li>
                                 </ul>
+                                <div className="social-media-icons">
+                                    <ul class="social-ul">
+                                        <li>
+                                            <a href="">
+                                                <FontAwesomeIcon
+                                                    icon={['fab', 'linkedin']}
+                                                    size="lg"
+                                                    color="snow"
+                                                />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <FontAwesomeIcon
+                                                    icon={['fab', 'facebook-square']}
+                                                    size="lg"
+                                                    color="snow"
+                                                />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <FontAwesomeIcon
+                                                    icon={['fab', 'instagram']}
+                                                    size="lg"
+                                                    color="snow"
+                                                />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <FontAwesomeIcon
+                                                    icon={['fab', 'twitter-square']}
+                                                    size="lg"
+                                                    color="snow"
+                                                />
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="section section-4">
-                        <COPYRIGHT>
-                            <p>&#169; Company 2020
-                                <span> | </span>
-                                <a href="#">Privacy Policy</a>
-                            </p>
-                        </COPYRIGHT>
-                    </div>
-            </CONTAINER>
-            </FOOTER>
+                        <div className="section section-4">
+                            <COPYRIGHT>
+                                <p>&#169; Company 2020
+                                    <span> | </span>
+                                    <a href="#">Privacy Policy</a>
+                                </p>
+                            </COPYRIGHT>
+                        </div>
+                    </CONTAINER>
+                </FOOTER>
+             </ScrollAnimation>
         </STYLES>
     );
 }

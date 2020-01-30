@@ -8,8 +8,13 @@ const STYLES = styled.div`
     @import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Roboto+Condensed&display=swap');
     height: 60vh;
     width: 100%;
-    background: url(${PalmTrees});
-    background-size: cover;
+    //background: url(${PalmTrees});
+    //background-size: cover;
+    //background: #0E38B1;
+    //background: rgb(252,76,70);
+    //background: linear-gradient(90deg, rgba(252,76,70,1) 0%, rgba(14,56,177,0.7133228291316527) 100%);
+    background: rgb(252,76,70);
+    background: linear-gradient(90deg, rgba(252,76,70,1) 0%, rgba(14,56,177,1) 100%);
     padding-top: 3em;
     padding-bottom: 3em;
     position: relative;
@@ -40,7 +45,7 @@ const H2 = styled.h2`
     font-size: 2em;
     color: snow;
     width: 90%;
-    margin: 0 auto;
+    margin: .5em auto;
     display: flex;
     align-items: center;
 `;
@@ -51,7 +56,7 @@ const BUTTON = styled.button`
     font-size: .9em;
     background: #FC4C46;
     display: block;
-    margin: 3em auto;
+    margin: auto;
     border: none;
     color: snow;
     border-radius: 10px;
@@ -62,11 +67,12 @@ const BUTTON = styled.button`
 const CallToAction = () => {
     return (
         <STYLES>
-            <CONTAINER>
-                    <H2>Introducing the flexible and more efficient way to promote your business</H2>
-                    <BUTTON>CONTACT US</BUTTON>
-               
-            </CONTAINER>
+            <ScrollAnimation animateIn="fadeIn" duration="2">
+                <CONTAINER>
+                        <H2>Introducing the flexible and more efficient way to promote your business</H2>
+                        <BUTTON>CONTACT US</BUTTON>
+                </CONTAINER>
+            </ScrollAnimation>
         </STYLES>
     );
 }

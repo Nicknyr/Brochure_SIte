@@ -6,7 +6,8 @@ import ScrollToTop from './ScrollToTop';
 const STYLES = styled.div`
     height: 60vh;
     width: 100%;
-    background: #646361;
+    //background: #646361;
+    background: #0E38B1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +21,7 @@ const STYLES = styled.div`
     }
 
     @media(min-width: 768px) {
-        height: 40vh;
+        height: 30vh;
 
         h2 {
             font-size: 2em;
