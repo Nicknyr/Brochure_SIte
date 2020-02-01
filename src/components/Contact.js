@@ -11,19 +11,8 @@ const STYLES = styled.div`
     flex-direction: column;
     padding-top: 8em;
     padding-bottom: 8em;
-    margin-left: 20px;
-    margin-right: 20px;
-
-    .h2-container {
-        width: 100%;
-        text-align: center;
-
-        h2 {
-            font-family: 'Frank Ruhl Libre', serif;
-            font-size: 2em;
-            color: black;
-        }
-    }
+    //margin-left: 20px;
+    //margin-right: 20px;
 
     @media(min-width: 768px) {
         margin: 0 2em;
@@ -34,12 +23,12 @@ const STYLES = styled.div`
     }
 
     @media(min-width: 992px) {
-        margin: 0 5em;
+        margin: 0 7em;
     } 
 `;
 
 const INFO = styled.div`
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
@@ -52,7 +41,7 @@ const INFO = styled.div`
         text-align: left;
         margin-top: 1em;
         margin-bottom: 1em;
-        background: blue;
+        //background: blue;
         
         p {
             margin-top: 1em;
@@ -70,10 +59,10 @@ const INFO = styled.div`
 
 
     .social-ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
+        display: inline-flex;
+        //flex-direction: row;
+        //justify-content: flex-start;
+        //align-items: center;
         margin-top: 1em;
         height: 2em;
 
@@ -113,12 +102,7 @@ const FORMCONTAINER = styled.div`
     flex: 1;
     margin-top: 3em;
     color: black;
-    background: red;
-
-    @media(min-width: 768px) {
-        margin-top: 0;
-        justify-content: center;
-    }
+    //background: red;
 
     .form-row {
         display: flex;
@@ -132,9 +116,9 @@ const FORMCONTAINER = styled.div`
     input[type="text"] {
         background-color: transparent;
         border: none;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #4B4B4B;
         width: 300px;
-        color: black;
+        color: #4B4B4B;
         height: 2em;
         padding: 0.2rem 0.2rem;
         font-size: 1rem;
@@ -156,19 +140,19 @@ const FORMCONTAINER = styled.div`
         }
 
         ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-            color: black;
+            color: #4B4B4B;
             font-size: 1em;
         }
         ::-moz-placeholder { /* Firefox 19+ */
-            color: black;
+            color: #4B4B4B;
             font-size: 1em;
         }
         :-ms-input-placeholder { /* IE 10+ */
-            color: black;
+            color: #4B4B4B;
             font-size: 1em;
         }
         :-moz-placeholder { /* Firefox 18- */
-            color: black;
+            color: #4B4B4B;
             font-size: 1em;
         }
         
@@ -200,17 +184,43 @@ const FORMCONTAINER = styled.div`
             opacity: 1;
         }
     }
+
+
+    @media(min-width: 768px) {
+        margin-top: 0;
+        justify-content: center;
+
+        input[type="text"] {
+            width: 100%;
+        }
+    }
 `;
+
+const H2CONTAINER = styled.div`
+    width: 100%;
+    text-align: center;
+
+    h2 {
+        font-family: 'Frank Ruhl Libre', serif;
+        font-size: 2em;
+        color: black;
+    }
+
+    @media(min-width: 786px) {
+        text-align: left;
+    }
+`;
+   
 
 
 
 const Contact = () => {
     return(
         <STYLES>
-            <div className="h2-container">
+            <H2CONTAINER name="contact">
                 <h2>Contact us</h2>
                 <LINE></LINE>
-            </div>
+            </H2CONTAINER>
             <INFO>
                 <div className="details">
                     <p>Get in touch</p>
@@ -219,46 +229,46 @@ const Contact = () => {
                     <p>mail@url.com</p>
                     <p>555-212-9999</p>
                     <div className="social-p">
-                        <p>Get in touch on social media</p>
+                        <span>Get in touch on social media</span>
+                        <ul class="social-ul">
+                            <li>
+                                <a href="">
+                                    <FontAwesomeIcon
+                                        icon={['fab', 'linkedin']}
+                                        size="lg"
+                                        color="black"
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <FontAwesomeIcon
+                                        icon={['fab', 'facebook-square']}
+                                        size="lg"
+                                        color="black"
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <FontAwesomeIcon
+                                        icon={['fab', 'instagram']}
+                                        size="lg"
+                                        color="black"
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <FontAwesomeIcon
+                                        icon={['fab', 'twitter-square']}
+                                        size="lg"
+                                        color="black"
+                                    />
+                                </a>
+                            </li>
+                        </ul>  
                     </div>
-                    <ul class="social-ul">
-                        <li>
-                            <a href="">
-                                <FontAwesomeIcon
-                                    icon={['fab', 'linkedin']}
-                                    size="lg"
-                                    color="black"
-                                />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <FontAwesomeIcon
-                                    icon={['fab', 'facebook-square']}
-                                    size="lg"
-                                    color="black"
-                                />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <FontAwesomeIcon
-                                    icon={['fab', 'instagram']}
-                                    size="lg"
-                                    color="black"
-                                />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <FontAwesomeIcon
-                                    icon={['fab', 'twitter-square']}
-                                    size="lg"
-                                    color="black"
-                                />
-                            </a>
-                        </li>
-                    </ul>  
                 </div>
                 <FORMCONTAINER>
                     <form>

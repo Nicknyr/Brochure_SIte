@@ -21,7 +21,7 @@ const STYLES = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        //width: 100%;
         
         li {
             margin-top: 2.5em;
@@ -40,7 +40,7 @@ const STYLES = styled.div`
             margin: 0 auto;
 
             @media(min-width: 768px) {
-                width: 90%;
+                //width: 90%;
                 margin: 0 auto;
 
             }
@@ -54,12 +54,6 @@ const STYLES = styled.div`
         }
     }
 
-`;
-
-const H2 = styled.h2`
-    font-family: 'Frank Ruhl Libre', serif;
-    font-size: 2em;
-    color: black;
 `;
 
 const LINE = styled.div`
@@ -137,26 +131,29 @@ const CONTAINER = styled.div`
 `;
 
 const H2CONTAINER = styled.div`
-    height: auto;
-    width: 100%;
-    
-    @media(min-width: 768px) {
-        width: 90%;
+    //width: 90%;
+    text-align: center;
+    margin: 0 7em;
+
+    h2 {
+        font-family: 'Frank Ruhl Libre', serif;
+        font-size: 2em;
+        color: black;
+    }
+
+    @media(min-width: 786px) {
         text-align: left;
-        margin: 0 auto;
     }
 `;
-
 
 
 const Team = () => {
     return (
         <STYLES>
             <H2CONTAINER>
-                <H2>Our Team</H2>
+                <h2>Our Team</h2>
                 <LINE></LINE>
             </H2CONTAINER>
-           
             <ul>
                 <ScrollAnimation animateIn="zoomIn" duration="1">
                     <li>

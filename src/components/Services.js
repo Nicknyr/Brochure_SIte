@@ -69,12 +69,10 @@ const UL = styled.ul`
         display: inline-flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 100%;
-        //background: blue;
+        //width: 100%;
 
         li {
-            width: 25em;
-            //background: red;
+            width: 22em;
             height: 15em;
         }
         
@@ -82,13 +80,18 @@ const UL = styled.ul`
 `;
 
 const H2CONTAINER = styled.div`
-    height: auto;
-    width: 100%;
-    
-    @media(min-width: 768px) {
-        width: 90%;
+    //width: 90%;
+    text-align: center;
+    margin: 0 7em;
+
+    h2 {
+        font-family: 'Frank Ruhl Libre', serif;
+        font-size: 2em;
+        color: black;
+    }
+
+    @media(min-width: 786px) {
         text-align: left;
-        margin: 0 auto;
     }
 `;
 

@@ -20,12 +20,6 @@ const STYLES = styled.div`
     padding-top: 8em;
     padding-bottom: 8em;
 
-    h2 {
-        font-family: 'Frank Ruhl Libre', serif;
-        font-size: 2em;
-        color: black;
-    }
-
     ul {
         display: flex;
         flex-direction: column;
@@ -33,7 +27,7 @@ const STYLES = styled.div`
         align-items: center;
 
         @media(min-width: 768px) {
-            width: 90%;
+            width: 100%;
             margin: 0 auto;
 
         }
@@ -46,7 +40,10 @@ const STYLES = styled.div`
         }
     }
 
+
     @media(min-width: 992px) {
+        //margin: 0 7em;
+
         ul {
             flex-direction: row;
             flex-wrap: wrap;
@@ -107,13 +104,18 @@ const CONTAINER = styled.div`
 `;
 
 const H2CONTAINER = styled.div`
-    height: auto;
-    width: 100%;
-    
-    @media(min-width: 768px) {
-        width: 90%;
+    //width: 90%;
+    text-align: center;
+    margin: 0 7em;
+
+    h2 {
+        font-family: 'Frank Ruhl Libre', serif;
+        font-size: 2em;
+        color: black;
+    }
+
+    @media(min-width: 786px) {
         text-align: left;
-        margin: 0 auto;
     }
 `;
 
@@ -132,7 +134,6 @@ class Portfolio extends Component {
                     <h2>Portfolio</h2>
                     <LINE></LINE>
                 </H2CONTAINER>
-                
                 <ul name="portfolio" >
                     <ScrollAnimation animateIn="zoomIn" duration="1">
                         <li>

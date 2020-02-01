@@ -6,6 +6,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, animateScroll as scroll } from "react-scroll";
 import ScrollToTop from './ScrollToTop';
+import HamburgerMenu from './HamburgerMenu';
 
 // #01BE9D
 
@@ -267,10 +268,20 @@ class Jumbotron extends Component {
                                     </Link>
                                 </li>
                                 <li>
-                                    <a href="#">CONTACT</a>
+                                    <Link
+                                        activeClass="active"
+                                        to="contact"
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-70}
+                                        duration= {500}
+                                    >
+                                    CONTACT
+                                    </Link>
                                 </li>
                             </ul>
                         </NAVBAR>
+                        {/*
                         <MOBILE>
                             <img src={Logo} height="100"/>
                             { this.state.menuOpen ?
@@ -356,6 +367,9 @@ class Jumbotron extends Component {
                                 </ul>
                             </DROPDOWN>
                         : null }
+                        */}
+                        
+                        <HamburgerMenu />
                         <CONTAINER>
                             <ScrollAnimation animateIn="fadeIn" duration="5">
                                 <INTRO>
