@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const STYLES = styled.div`
     @import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Roboto+Condensed&display=swap');
@@ -217,78 +217,80 @@ const H2CONTAINER = styled.div`
 const Contact = () => {
     return(
         <STYLES>
-            <H2CONTAINER name="contact">
-                <h2>Contact us</h2>
-                <LINE></LINE>
-            </H2CONTAINER>
-            <INFO>
-                <div className="details">
-                    <p>Get in touch</p>
-                    <p>256 LaFayette St</p>
-                    <p>New York, NY 10001</p>
-                    <p>mail@url.com</p>
-                    <p>555-212-9999</p>
-                    <div className="social-p">
-                        <span>Get in touch on social media</span>
-                        <ul class="social-ul">
-                            <li>
-                                <a href="">
-                                    <FontAwesomeIcon
-                                        icon={['fab', 'linkedin']}
-                                        size="lg"
-                                        color="black"
-                                    />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <FontAwesomeIcon
-                                        icon={['fab', 'facebook-square']}
-                                        size="lg"
-                                        color="black"
-                                    />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <FontAwesomeIcon
-                                        icon={['fab', 'instagram']}
-                                        size="lg"
-                                        color="black"
-                                    />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <FontAwesomeIcon
-                                        icon={['fab', 'twitter-square']}
-                                        size="lg"
-                                        color="black"
-                                    />
-                                </a>
-                            </li>
-                        </ul>  
+            <ScrollAnimation animateIn="fadeIn" duration="2">
+                <H2CONTAINER name="contact">
+                    <h2>Contact us</h2>
+                    <LINE></LINE>
+                </H2CONTAINER>
+                <INFO>
+                    <div className="details">
+                        <p>Get in touch</p>
+                        <p>256 LaFayette St</p>
+                        <p>New York, NY 10001</p>
+                        <p>mail@url.com</p>
+                        <p>555-212-9999</p>
+                        <div className="social-p">
+                            <span>Get in touch on social media</span>
+                            <ul class="social-ul">
+                                <li>
+                                    <a href="">
+                                        <FontAwesomeIcon
+                                            icon={['fab', 'linkedin']}
+                                            size="lg"
+                                            color="black"
+                                        />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <FontAwesomeIcon
+                                            icon={['fab', 'facebook-square']}
+                                            size="lg"
+                                            color="black"
+                                        />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <FontAwesomeIcon
+                                            icon={['fab', 'instagram']}
+                                            size="lg"
+                                            color="black"
+                                        />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <FontAwesomeIcon
+                                            icon={['fab', 'twitter-square']}
+                                            size="lg"
+                                            color="black"
+                                        />
+                                    </a>
+                                </li>
+                            </ul>  
+                        </div>
                     </div>
-                </div>
-                <FORMCONTAINER>
-                    <form>
-                        <ul>
-                            <li className="form-row">
-                                <input type="text" placeholder="Your Name"></input>
-                            </li>
-                            <li className="form-row">
-                                <input type="text" placeholder="Email"></input>
-                            </li>
-                            <li className="form-row">
-                                <input type="text" placeholder="Your Message"></input>
-                            </li>
-                            <li className="form-row">
-                                <button className="submit-button">Submit</button>
-                            </li>
-                        </ul>
-                    </form>
-                </FORMCONTAINER>          
-            </INFO>
+                    <FORMCONTAINER>
+                        <form>
+                            <ul>
+                                <li className="form-row">
+                                    <input type="text" placeholder="Your Name"></input>
+                                </li>
+                                <li className="form-row">
+                                    <input type="text" placeholder="Email"></input>
+                                </li>
+                                <li className="form-row">
+                                    <input type="text" placeholder="Your Message"></input>
+                                </li>
+                                <li className="form-row">
+                                    <button className="submit-button">Submit</button>
+                                </li>
+                            </ul>
+                        </form>
+                    </FORMCONTAINER>          
+                </INFO>
+            </ScrollAnimation>
         </STYLES>
     );
 }

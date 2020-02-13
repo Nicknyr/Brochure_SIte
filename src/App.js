@@ -5,6 +5,7 @@ import styled, { css } from 'styled-components';
 import Jumbotron from './components/Jumbotron';
 import Intro from './components/Intro';
 import About from './components/About';
+import Review from './components/Review';
 import Portfolio from './components/Portfolio';
 import Services from './components/Services';
 import CallToAction from './components/CallToAction';
@@ -52,12 +53,13 @@ function App() {
         <Intro />
         <About />
         <Portfolio />
+        <Review />
         <Team />
         <CallToAction />
         <Services />
         <Banner />
         <Contact />
-        <ThirdFooter />
+        <Footer />
       </React.Fragment>
     </div>
   );

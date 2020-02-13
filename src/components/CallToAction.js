@@ -48,6 +48,8 @@ const H2 = styled.h2`
     margin: .5em auto;
     display: flex;
     align-items: center;
+    background: rgba(0,0,0,.75);
+    opacity: .93;
 `;
 
 const BUTTON = styled.button`
