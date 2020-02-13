@@ -195,26 +195,6 @@ class Portfolio extends Component {
                             </CONTAINER>
                         </li>
                     </ScrollAnimation>
-                    <ScrollAnimation animateIn="zoomIn" duration="1">
-                        <li>
-                            <CONTAINER>
-                                <img src={Writing} height="200"/>
-                                <div className="overlay">
-                                    <p>Project Seven</p>
-                                </div>
-                            </CONTAINER>
-                        </li>
-                    </ScrollAnimation>
-                    <ScrollAnimation animateIn="zoomIn" duration="1">
-                        <li>
-                            <CONTAINER>
-                                <img src={Lightbulb} height="200"/>
-                                <div className="overlay">
-                                    <p>Project Eight</p>
-                                </div>
-                            </CONTAINER>
-                        </li>  
-                    </ScrollAnimation>
                 </ul>
             </STYLES>
         );

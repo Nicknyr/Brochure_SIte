@@ -7,7 +7,8 @@ import Logo from '../assets/logo.svg';
 const STYLES = styled.div`
     @import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Roboto+Condensed&display=swap');
     font-family: 'Roboto Condensed', sans-serif;
-    //display: flex;
+    display: flex;
+
     /* Position and sizing of burger button */
     .bm-burger-button {
         position: absolute;
@@ -85,7 +86,7 @@ const STYLES = styled.div`
         background: rgba(0, 0, 0, 0.3);
     }
 
-    @media(min-width: 786px) {
+    @media(min-width: 768px) {
         display: none;
     }
 
