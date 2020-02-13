@@ -230,7 +230,7 @@ class Jumbotron extends Component {
                                 </li>
                             </ul>
                         </NAVBAR>
-                        <HamburgerMenu />
+                        <HamburgerMenu pageWrapId={"page-wrap"} outerContainerId={"App"}/>
                         <CONTAINER>
                             <ScrollAnimation animateIn="fadeIn" duration="5">
                                 <INTRO>

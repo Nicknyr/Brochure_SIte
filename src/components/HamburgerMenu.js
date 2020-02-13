@@ -9,6 +9,25 @@ const STYLES = styled.div`
     font-family: 'Roboto Condensed', sans-serif;
     display: flex;
 
+    html, body {
+        margin: 0;
+    }
+
+    #App {
+    font-family: sans-serif;
+
+    /* Give app full page to work with */
+    height: 100vh;
+    }
+
+    #page-wrap {
+        text-align: center;
+
+        /* Prevent sidebar from showing a scrollbar on page */
+        overflow: auto;
+    }
+
+
     /* Position and sizing of burger button */
     .bm-burger-button {
         position: absolute;
