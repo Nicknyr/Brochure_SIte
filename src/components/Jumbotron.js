@@ -24,7 +24,7 @@ const STYLES = styled.div`
     align-items: center;
     //position: relative;
     //background: #0E38B1;
-        
+    
 `;
 
 
@@ -125,7 +125,7 @@ const NAVBAR = styled.div`
         }
     }
 
-    @media(max-width: 786px) {
+    @media(max-width: 768px) {
         display: none;
     }
 `
@@ -230,7 +230,7 @@ class Jumbotron extends Component {
                                 </li>
                             </ul>
                         </NAVBAR>
-                        <HamburgerMenu pageWrapId={"page-wrap"} outerContainerId={"App"}/>
+                        <HamburgerMenu pageWrapId={"page-wrap"} outerContainerId={"App"} className="hamburger"/>
                         <CONTAINER>
                             <ScrollAnimation animateIn="fadeIn" duration="5">
                                 <INTRO>

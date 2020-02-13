@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { elastic as Menu } from 'react-burger-menu';
+import { slide as Menu } from 'react-burger-menu';
 import { Link, animateScroll as scroll } from "react-scroll";
 import Logo from '../assets/logo.svg';
 
@@ -8,6 +8,10 @@ const STYLES = styled.div`
     @import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Roboto+Condensed&display=swap');
     font-family: 'Roboto Condensed', sans-serif;
     display: flex;
+
+    @media(min-width: 769px) {
+        display: none;
+    }
 
     html, body {
         margin: 0;
@@ -105,10 +109,6 @@ const STYLES = styled.div`
         background: rgba(0, 0, 0, 0.3);
     }
 
-    @media(min-width: 768px) {
-        display: none;
-    }
-
 `;
 
 class HamburgerMenu extends React.Component {
@@ -187,12 +187,6 @@ class HamburgerMenu extends React.Component {
                         duration= {500}
                         onClick={this.toggleMenu} 
                     >Contact Us</Link>
-                    {/*
-                    <a id="home" className="menu-item" href="/">Home</a>
-                    <a id="about" className="menu-item" href="/about">About Us</a>
-                    <a id="contact" className="menu-item" href="/contact">Portfolio</a>
-                    <a onClick={ this.showSettings } className="menu-item--small" href="">Contact Us</a>
-                    */}
                 </Menu>
           </STYLES>
       );
