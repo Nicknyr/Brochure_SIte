@@ -7,10 +7,10 @@ import Logo from '../assets/logo.svg';
 const STYLES = styled.div`
     @import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Roboto+Condensed&display=swap');
     font-family: 'Roboto Condensed', sans-serif;
-    display: flex;
+    display: none;
 
-    @media(min-width: 769px) {
-        display: none;
+    @media(max-width: 768px) {
+        display: flex;
     }
 
     html, body {
