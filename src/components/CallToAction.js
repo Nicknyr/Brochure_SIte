@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import PalmTrees from '../assets/palmtrees-dark.jpg';
+import PalmTrees from '../assets/palmtrees-dark-resized.jpg';
 import ScrollAnimation from 'react-animate-on-scroll';
 import ScrollToTop from './ScrollToTop';
 
