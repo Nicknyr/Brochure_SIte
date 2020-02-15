@@ -3,50 +3,6 @@ import styled, { css, keyframes } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, animateScroll as scroll } from "react-scroll";
 
-const STYLES = styled.div`
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    background: #01BE9D;
-    z-index: 999;
-    -webkit-animation: fadein .5s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein .5s; /* Firefox < 16 */
-    -ms-animation: fadein .5s; /* Internet Explorer */
-    -o-animation: fadein .5s; /* Opera < 12.1 */
-    animation: fadein .5s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @keyframes fadein {
-        from { opacity: 0; }
-        to   { opacity: 1; }
-    }
-
-    /* Firefox < 16 */
-    @-moz-keyframes fadein {
-        from { opacity: 0; }
-        to   { opacity: 1; }
-    }
-
-    /* Safari, Chrome and Opera > 12.1 */
-    @-webkit-keyframes fadein {
-        from { opacity: 0; }
-        to   { opacity: 1; }
-    }
-
-    /* Internet Explorer */
-    @-ms-keyframes fadein {
-        from { opacity: 0; }
-        to   { opacity: 1; }
-    }
-
-    /* Opera < 12.1 */
-    @-o-keyframes fadein {
-        from { opacity: 0; }
-        to   { opacity: 1; }
-    }
-`;
 
 const HamburgerIconContainer = styled.div`
     position: absolute;
@@ -73,7 +29,7 @@ const NavigationUL = styled.ul`
 
 const HamburgerMenu = (props) => {
     return (
-        <STYLES>
+        <div>
             <HamburgerIconContainer>
                 <FontAwesomeIcon
                     icon="times"
@@ -129,7 +85,7 @@ const HamburgerMenu = (props) => {
                     onClick={props.onMenuClick} 
                 >Contact Us</Link>
             </NavigationUL>            
-        </STYLES>
+        </div>
     );
 }
 

@@ -140,7 +140,7 @@ const CONTAINER = styled.div`
     }
 `;
 
-const HamburgerContainer = styled.div`
+const HamburgerIconContainer = styled.div`
     display: none;
     position: absolute;
     right: 20px;
@@ -152,13 +152,52 @@ const HamburgerContainer = styled.div`
 
 `;
 
-const HamburgerOpenMenu = styled.div`
+
+const HamburgerContainer = styled.div`
     height: 100vh;
     width: 100%;
     position: absolute;
-    background: purple;
+    background: #01BE9D;
     z-index: 999;
+    -webkit-animation: fadein .5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein .5s; /* Firefox < 16 */
+    -ms-animation: fadein .5s; /* Internet Explorer */
+    -o-animation: fadein .5s; /* Opera < 12.1 */
+    animation: fadein .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Firefox < 16 */
+    @-moz-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Safari, Chrome and Opera > 12.1 */
+    @-webkit-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Internet Explorer */
+    @-ms-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Opera < 12.1 */
+    @-o-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
 `;
+
 
 class Jumbotron extends Component {
     constructor(props) {
@@ -248,23 +287,25 @@ class Jumbotron extends Component {
                             </li>
                         </ul>
                     </NAVBAR>
-                    <HamburgerContainer>
+                    <HamburgerIconContainer>
                         <FontAwesomeIcon
                             icon="bars"
                             size="2x"
                             color="snow"
                             onClick={this.onMenuClick}
                         />
-                    </HamburgerContainer>
+                    </HamburgerIconContainer>
                     {this.state.menuOpen ?
-                        <HamburgerMenu onMenuClick={this.onMenuClick}>
-                            <FontAwesomeIcon
-                                icon="bars"
-                                size="2x"
-                                color="snow"
-                                onClick={this.onMenuClick}
-                            />
-                        </HamburgerMenu>
+                        <HamburgerContainer>
+                            <HamburgerMenu onMenuClick={this.onMenuClick}>
+                                <FontAwesomeIcon
+                                    icon="bars"
+                                    size="2x"
+                                    color="snow"
+                                    onClick={this.onMenuClick}
+                                />
+                            </HamburgerMenu>
+                        </HamburgerContainer>
                     : null }
                     <CONTAINER>
                         <ScrollAnimation animateIn="fadeIn" duration="5">
