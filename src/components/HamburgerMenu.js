@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import All from './ReactBurgerMenu';
 import { slide as Menu } from 'react-burger-menu';
 import { Link, animateScroll as scroll } from "react-scroll";
 import Logo from '../assets/logo.svg';
@@ -145,7 +144,7 @@ class HamburgerMenu extends React.Component {
                     onStateChange={(state) => this.handleStateChange(state)}>
                     <Link
                         activeClass="active"
-                        to="home"
+                        to="section1"
                         spy={true}
                         smooth={true}
                         offset={-70}
