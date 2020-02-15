@@ -24,6 +24,17 @@ const STYLES = styled.div`
     align-items: center;
     //position: relative;
     //background: #0E38B1;
+
+    .hamburger {
+        display: flex;
+    }
+
+    @media(min-width: 769px) {
+        .hamburger {
+            display: none;
+        }
+    }
+
     
 `;
 
@@ -164,83 +175,85 @@ class Jumbotron extends Component {
     render() {
         return (
             <div>        
-                    <STYLES>
-                        <NAVBAR>
-                            <ul>
-                                <li> 
-                                    <img src={Logo} height="200"/>
-                                </li>
-                                <li>
+                <STYLES>
+                    <NAVBAR>
+                        <ul>
+                            <li> 
+                                <img src={Logo} height="200"/>
+                            </li>
+                            <li>
+                            <Link
+                                activeClass="active"
+                                to="section1"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration= {500}
+                            >HOME</Link>
+                            </li>
+                            <li>
                                 <Link
                                     activeClass="active"
-                                    to="section1"
+                                    to="about"
                                     spy={true}
                                     smooth={true}
                                     offset={-70}
                                     duration= {500}
-                                >HOME</Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        activeClass="active"
-                                        to="about"
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-70}
-                                        duration= {500}
-                                    >
-                                        ABOUT US
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        activeClass="active"
-                                        to="portfolio"
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-70}
-                                        duration= {500}
-                                    >
-                                        PORTFOLIO
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        activeClass="active"
-                                        to="services"
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-70}
-                                        duration= {500}
-                                    >
-                                       SERVICES
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        activeClass="active"
-                                        to="contact"
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-70}
-                                        duration= {500}
-                                    >
-                                    CONTACT
-                                    </Link>
-                                </li>
-                            </ul>
-                        </NAVBAR>
-                        <HamburgerMenu pageWrapId={"page-wrap"} outerContainerId={"App"} className="hamburger"/>
-                        <CONTAINER>
-                            <ScrollAnimation animateIn="fadeIn" duration="5">
-                                <INTRO>
-                                    <H1>We believe in the power of effective branding and marketing</H1>
-                                    <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</P>
-                                    <BUTTON>GET MY FREE QUOTE</BUTTON>
-                                </INTRO>
-                            </ScrollAnimation>
-                        </CONTAINER>
-                    </STYLES>
+                                >
+                                    ABOUT US
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    activeClass="active"
+                                    to="portfolio"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration= {500}
+                                >
+                                    PORTFOLIO
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    activeClass="active"
+                                    to="services"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration= {500}
+                                >
+                                    SERVICES
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    activeClass="active"
+                                    to="contact"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration= {500}
+                                >
+                                CONTACT
+                                </Link>
+                            </li>
+                        </ul>
+                    </NAVBAR>
+                    <div className="hamburger">
+                        <HamburgerMenu pageWrapId={"page-wrap"} outerContainerId={"App"}/>
+                    </div>
+                    <CONTAINER>
+                        <ScrollAnimation animateIn="fadeIn" duration="5">
+                            <INTRO>
+                                <H1>We believe in the power of effective branding and marketing</H1>
+                                <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</P>
+                                <BUTTON>GET MY FREE QUOTE</BUTTON>
+                            </INTRO>
+                        </ScrollAnimation>
+                    </CONTAINER>
+                </STYLES>
             </div>
            
         );
