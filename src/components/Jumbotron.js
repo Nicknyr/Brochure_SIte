@@ -198,6 +198,15 @@ const HamburgerContainer = styled.div`
     }
 `;
 
+const NavigationUL = styled.ul`
+
+    a {
+        display: block;
+        margin-top: 2.5rem;
+        font-size: 1.4rem;
+        color: snow;
+    }
+`;
 
 class Jumbotron extends Component {
     constructor(props) {
@@ -297,14 +306,61 @@ class Jumbotron extends Component {
                     </HamburgerIconContainer>
                     {this.state.menuOpen ?
                         <HamburgerContainer>
-                            <HamburgerMenu onMenuClick={this.onMenuClick}>
+                            <HamburgerIconContainer>
                                 <FontAwesomeIcon
-                                    icon="bars"
+                                    icon="times"
                                     size="2x"
-                                    color="snow"
+                                    color="#FC4C46"
                                     onClick={this.onMenuClick}
                                 />
-                            </HamburgerMenu>
+                            </HamburgerIconContainer>
+                            <NavigationUL>
+                                <Link
+                                    activeClass="active"
+                                    to="section1"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration= {500}
+                                    onClick={this.onMenuClick}
+                                >Home</Link>
+                                <Link
+                                    activeClass="active"
+                                    to="about"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration= {500}
+                                    onClick={this.onMenuClick}
+                                >About Us</Link>
+                                <Link
+                                    activeClass="active"
+                                    to="portfolio"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration= {500}
+                                    onClick={this.onMenuClick}
+                                >Our Work</Link>
+                                <Link
+                                    activeClass="active"
+                                    to="services"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration= {500}
+                                    onClick={this.onMenuClick} 
+                                >Our Services</Link>
+                                <Link
+                                    activeClass="active"
+                                    to="contact"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration= {500}
+                                    onClick={this.onMenuClick} 
+                                >Contact Us</Link>
+                            </NavigationUL>        
                         </HamburgerContainer>
                     : null }
                     <CONTAINER>
