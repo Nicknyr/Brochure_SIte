@@ -17,12 +17,12 @@ import Footer from './components/Footer';
 import NewFooter from './components/NewFooter';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faLaptopCode, faArrowAltCircleUp, faTimes, faEdit, faPrint, faBullhorn, faLightbulb, faDatabase, faGem, faBars, faChevronCircleUp, faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faLaptopCode, faArrowAltCircleUp, faTimes, faEdit, faPrint, faBullhorn, faLightbulb, faDatabase, faGem, faChevronCircleUp, faChevronUp, faChevronDown, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare, faLinkedin, faInstagram, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
 import ScrollAnimation from 'react-animate-on-scroll';
 import ThirdFooter from './components/ThirdFooter';
 
-library.add(fab, faTimes, faArrowAltCircleUp, faLinkedin, faFacebookSquare, faInstagram, faTwitterSquare, faEdit, faPrint, faBullhorn, faLightbulb, faDatabase, faGem, faLaptopCode, faBars, faChevronCircleUp, faChevronUp, faChevronDown);
+library.add(fab, faTimes, faArrowAltCircleUp, faLinkedin, faFacebookSquare, faInstagram, faTwitterSquare, faEdit, faPrint, faBullhorn, faLightbulb, faDatabase, faGem, faLaptopCode, faChevronCircleUp, faChevronUp, faChevronDown, faBars);
 
 /*
 

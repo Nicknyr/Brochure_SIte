@@ -6,7 +6,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, animateScroll as scroll } from "react-scroll";
 import ScrollToTop from './ScrollToTop';
-import HamburgerMenu from './HamburgerMenu';
+import HamburgerMenu from './NewHamburgerMenu';
 
 // #01BE9D
 
@@ -24,18 +24,6 @@ const STYLES = styled.div`
     align-items: center;
     //position: relative;
     //background: #0E38B1;
-
-    .hamburger {
-        display: flex;
-    }
-
-    @media(min-width: 769px) {
-        .hamburger {
-            display: none;
-        }
-    }
-
-    
 `;
 
 
@@ -152,6 +140,25 @@ const CONTAINER = styled.div`
     }
 `;
 
+const HamburgerContainer = styled.div`
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    @media(max-width: 768px) {
+        display: flex;
+    }
+
+`;
+
+const HamburgerOpenMenu = styled.div`
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background: purple;
+    z-index: 999;
+`;
 
 class Jumbotron extends Component {
     constructor(props) {
@@ -241,9 +248,24 @@ class Jumbotron extends Component {
                             </li>
                         </ul>
                     </NAVBAR>
-                    <div className="hamburger">
-                        <HamburgerMenu/>
-                    </div>
+                    <HamburgerContainer>
+                        <FontAwesomeIcon
+                            icon="bars"
+                            size="2x"
+                            color="snow"
+                            onClick={this.onMenuClick}
+                        />
+                    </HamburgerContainer>
+                    {this.state.menuOpen ?
+                        <HamburgerMenu onMenuClick={this.onMenuClick}>
+                            <FontAwesomeIcon
+                                icon="bars"
+                                size="2x"
+                                color="snow"
+                                onClick={this.onMenuClick}
+                            />
+                        </HamburgerMenu>
+                    : null }
                     <CONTAINER>
                         <ScrollAnimation animateIn="fadeIn" duration="5">
                             <INTRO>
